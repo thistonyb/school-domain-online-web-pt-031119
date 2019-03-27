@@ -1,7 +1,7 @@
 require 'pry'
 class School
   attr_accessor :school_name, :roster
-  attr_reader
+
   def initialize(new_school)
     @school_name = new_school
     @roster = {}
@@ -21,9 +21,9 @@ class School
   end
 
   def sort
-    sorted_array = @roster.sort
-    sorted_array.each do |elem|
-      @roster[elem[0]] = elem[1].sort
+    sorted_array = @roster.sort #sorts the keys (not the values) into an array
+    sorted_array.each do |elem| #iterate over array
+      @roster[elem[0]] = elem[1].sort #uses first element (pre sorted) as an address to save sorted array of values(second element)
     end
     @roster
   end
