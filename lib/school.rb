@@ -25,6 +25,5 @@ class School
     sorted_array.each {|elem| @roster[elem[0]] = elem[1].sort} #iterate over array[[7, [name, name]], [8, [name, name]] ect.]
     # @roster[elem[0]] = elem[1].sort #uses first element (pre sorted) as an address to save sorted array of values(second element)
     @roster
-
   end
 end
