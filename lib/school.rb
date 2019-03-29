@@ -21,6 +21,18 @@ class School
   end
 
   def sort
+<<<<<<< HEAD
     @roster.each {|key, value| value.sort!}
+=======
+    sorted_array = @rosters.to_a #sorts the keys (not the values) into an array
+    sorted_array.each {|elem| @roster[elem[0]] = elem[1].sort} #iterate over array[[7, [name, name]], [8, [name, name]] ect.]
+     @roster[elem[0]] = elem[1].sort #uses first element (pre sorted) as an address to save sorted array of values(second element)
+    @roster
+>>>>>>> 186c51babe3b80bd8bb3a8f73eeafcf701a79e7a
   end
+  #def sort
+  #  @roster.each do |key, value|
+  #    value.sort!
+  #  end
+#  end
 end
